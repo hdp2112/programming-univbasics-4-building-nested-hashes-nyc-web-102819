@@ -74,6 +74,6 @@ def monopoly_with_fourth_tier
 	  }
 	  
 	  pathway = [:monopoly][:railroads][:names]
-	  pathway[:reading_railroad]["mortgage_value"] = "$100"
+	  pathway[:reading_railroad]["mortgage_value"] = "$100".to_i
 	  
 end
