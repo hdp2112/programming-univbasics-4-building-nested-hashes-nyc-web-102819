@@ -55,7 +55,7 @@ def monopoly_with_fourth_tier
   # they'll guide you in how to modify what you just did to have more
   # complexity.
   
-      monopoly = {
+    monopoly = {
 	  :railroads => {
 	    :pieces => 4, 
 	    :rent_in_dollars => {
@@ -65,12 +65,15 @@ def monopoly_with_fourth_tier
 	        :four_pieces_owned => 200
 	       },
 	     :names => {
-	       :reading_railroad => {:mortgage_value => ("$" + 100.to_s)},
-	       :pennsylvania_railroad => {:mortgage_value => "$200"},
-	       :b_and_o_railroad => {:mortgage_value => "$400"},
-	       :shortline_railroad => {:mortgage_value => "$800"}
+	       :reading_railroad => {},
+	       :pennsylvania_railroad => {},
+	       :b_and_o_railroad => {},
+	       :shortline_railroad => {}
 	      }
 	    }
 	  }
+	  
+	  pathway = [:monopoly][:railroads][:names]
+	  pathway[:reading_railroad]["mortgage_value"] = "$100"
 	  
 end
